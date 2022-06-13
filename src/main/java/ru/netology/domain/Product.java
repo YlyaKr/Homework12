@@ -16,6 +16,15 @@ public class Product {
         this.price = price;
     }
 
+    public boolean matches(String search) {
+        if (name.contains(search)) {
+            return true;
+            } else {
+            return false;
+        }
+//        return name.contains(search);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
