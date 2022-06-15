@@ -18,7 +18,19 @@ public class ProductsRepository {
         return products;
     }
 
+    public Product findById(int id) {
+        for (Product product : products) {
+            if (product.getId() == id) {
+                return product;
+            }
+        }
+        return null;
+    }
+
     public void removeById(int id) {
+        if (findById(id) == null) {
+            throw new NotFoundException("Элемент с id: " + id + " не найден");
+        }
         Product[] tmp = new Product[products.length - 1];
         int index = 0;
         for (Product product : products) {
