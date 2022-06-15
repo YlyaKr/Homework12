@@ -8,7 +8,7 @@ public class ProductsRepository {
     public void save(Product product) {
         for (Product product1 : products) {
             if (product.getId() == product1.getId()) {
-                throw new AlreadyExistsException("Элемент с данным id уже существует");
+                throw new AlreadyExistsException("Элемент с id: " + product.getId() + " уже существует");
             }
         }
         Product[] tmp = new Product[products.length + 1];

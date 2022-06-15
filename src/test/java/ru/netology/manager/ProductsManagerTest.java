@@ -14,7 +14,7 @@ public class ProductsManagerTest {
     Book book1 = new Book(1, "Ulyssesung", 700, "James Joyce");
     Smartphone smartphone1 = new Smartphone(2, "Samsung", 20000, "Samsung");
     Book book2 = new Book(3, "The Invisible Man", 800, "H. G. Wellsn");
-    Book book3 = new Book(3, "The Invisible Man2", 900, "H. G. Wellsn");
+    Book book3 = new Book(2, "The Invisible Man2", 900, "H. G. Wellsn");
 
     @Test
     public void testSaveExistingId() {
